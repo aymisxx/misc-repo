@@ -1,3 +1,0 @@
-MicroUAV_2D: Super-Lightweight Open-Source Planar Down-Cam Drone Simulator.
-
-Planning & Upload.
