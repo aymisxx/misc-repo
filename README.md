@@ -12,7 +12,7 @@
 
 - Even the ducks are like “yeah life is fine, we float” 🦆
 
-*And I? I'm allowed to feel like this too. Even if just for a moment.**
+**And I? I'm allowed to feel like this too. Even if just for a moment.**
 
 ---------------------------------------------------------------------------------------
 
