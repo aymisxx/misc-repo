@@ -2,6 +2,8 @@
 
 ---------------------------------------------------------------------------------------
 
+![Frutiger-Aero]((WALLPAPER)/ios.png)
+
 - The sun is literally smiling at you like it knows something you forgot 🌞
 
 - That tiny stream just keeps moving… no stress, no deadlines, just flow 🌊
