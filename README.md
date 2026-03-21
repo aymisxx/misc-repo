@@ -2,21 +2,21 @@
 
 ---------------------------------------------------------------------------------------
 
-![Frutiger-Aero]((HOMESCREEN)/ios.png)
+![Frutiger-Aero]((HOMESCREEN)/fruitger-aero.png)
 
-- The sun is literally smiling at me like it knows something I forgot 🌞
+- The cloud is literally smiling at me like it knows something I forgot.
 
-- That tiny stream just keeps moving… no stress, no deadlines, just flow 🌊
+- That tiny calm water-body is still… no stress, no deadlines, just peace.
 
-- The bunny and the pup? No existential crisis, no GPA, no interviews… just vibing 🐰🐶
+- The bug, and the bird? No existential crisis, no GPA, no interviews… just vibes.
 
-- Even the ducks are like “yeah life is fine, we float” 🦆
+- Even the frog on the leaf is like “yeah life is fine, I float”.
 
 **And I? I'm allowed to feel like this too. Even if just for a moment.**
 
 ---------------------------------------------------------------------------------------
 
-## 🌞 Tiny thought to carry into hard times!!
+## Tiny thought to carry into hard times!!
 
 I won't sit in it like:
 
