@@ -94,25 +94,28 @@ That is the world of **SVD**, the final boss with clean shoes.
 
 We work mostly over real numbers.
 
-- Vector in $\mathbb{R}^n$: 
- 
+**Vector** in $\mathbb{R}^n$:
+
 $$
 x = \begin{bmatrix}x_1 \\ x_2 \\ \vdots \\ x_n\end{bmatrix}
 $$
 
-- Matrix $A \in \mathbb{R}^{m \times n}$: maps $x \in \mathbb{R}^n$ to $Ax \in \mathbb{R}^m$
+**Matrix** $A \in \mathbb{R}^{m \times n}$: maps $x \in \mathbb{R}^n$ to $Ax \in \mathbb{R}^m$
 
-- Linear system:
+**Linear system:**
+
 $$
 Ax = b
 $$
 
-- Dot product:
+**Dot product:**
+
 $$
 x^T y
 $$
 
-- Norm:
+**Norm:**
+
 $$
 \|x\| = \sqrt{x^T x}
 $$
@@ -386,7 +389,7 @@ A vector space is a set closed under:
 plus the usual algebraic rules.
 
 Examples:
-- \(\mathbb{R}^2\), \(\mathbb{R}^3\), \(\mathbb{R}^n\)
+- $\mathbb{R}^2$, $\mathbb{R}^3$, $\mathbb{R}^n$
 - sets of matrices of fixed size
 - sets of functions satisfying linear conditions
 
@@ -948,12 +951,15 @@ to get eigenvectors.
 ## 5.3 Useful fast facts
 
 For small matrices:
-- trace = sum of eigenvalues
+
+- trace = sum of eigenvalues:
+
 $$
 \mathrm{tr}(A)=\sum_i \lambda_i
 $$
 
-- determinant = product of eigenvalues
+- determinant = product of eigenvalues:
+
 $$
 \det(A)=\prod_i \lambda_i
 $$
@@ -1077,7 +1083,8 @@ $$
 then:
 - all eigenvalues are real.
 - eigenvectors can be chosen orthonormal.
-- \(A\) is diagonalizable as
+- $A$ is diagonalizable as:
+
 $$
 A = Q\Lambda Q^T
 $$
@@ -1272,6 +1279,7 @@ This gives the least-squares joint velocity producing desired task velocity when
 If redundant:
 - pseudoinverse gives minimum norm solution
 - nullspace term adds secondary behavior:
+
 $$
 \dot q = J^+v + (I-J^+J)z
 $$
