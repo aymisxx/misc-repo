@@ -64,9 +64,11 @@ At the highest level, this course answers six giant questions:
 ## 2. If there are solutions, how many are there?
 
 That is the world of **nullspace**, free variables, and the complete solution:
+
 $$
 x = x_p + x_n
 $$
+
 where $x_p$ is one particular solution and $x_n \in N(A)$.
 
 ## 3. What geometric structure lives inside a matrix?
@@ -127,17 +129,21 @@ $$
 ## 1.1 What is a linear system really?
 
 A linear system
+
 $$
 Ax = b
 $$
+
 is a set of linear constraints on unknowns.
 
 Example:
+
 $$
 2x - y = 0,\quad -x + 2y = 3
 $$
 
 This can be written as:
+
 $$
 \begin{bmatrix}
 2 & -1\\
@@ -167,9 +173,11 @@ The solution is the intersection of those objects.
 
 ### Column picture
 Write:
+
 $$
 x_1 a_1 + x_2 a_2 + \cdots + x_n a_n = b
 $$
+
 The question becomes:
 
 **Can the columns of $A$ be combined to produce $b$?**
@@ -191,6 +199,7 @@ That is not poetry. That is the thing.
 ## 1.2 Linear combinations and independence
 
 A **linear combination** of vectors $a,b$ is:
+
 $$
 \alpha a + \beta b
 $$
@@ -251,11 +260,13 @@ This is exactly how numerical solvers figure out whether your linearized problem
 Every elimination step can be represented by multiplying by an **elementary matrix**.
 
 After enough elimination:
+
 $$
 E_k \cdots E_2 E_1 A = U
 $$
 
 Invert the eliminations:
+
 $$
 A = LU
 $$
@@ -265,9 +276,11 @@ where:
 - $U$ is upper triangular.
 
 If row exchanges are needed:
+
 $$
 PA = LU
 $$
+
 where $P$ is a permutation matrix.
 
 ### Why LU matters
@@ -301,9 +314,11 @@ Theoretical solvability is one thing. Numerical solvability is another beast wit
 ## 1.6 Cost of direct solving
 
 Dense Gaussian elimination costs roughly:
+
 $$
 \frac{2}{3}n^3
 $$
+
 operations for large $n$.
 
 This becomes absurdly expensive for huge systems.
@@ -321,11 +336,13 @@ Never casually invert giant matrices like a chaos goblin.
 ## 1.7 Matrix inverse
 
 The inverse $A^{-1}$ exists if:
+
 $$
 A^{-1}A = AA^{-1} = I
 $$
 
 Then:
+
 $$
 x = A^{-1}b
 $$
@@ -354,16 +371,19 @@ But numerically, direct inversion is often replaced by better structured solves 
 ## 1.8 Transpose, symmetry, and $LDL^T$
 
 The transpose flips rows and columns:
+
 $$
 (A^T)_{ij} = A_{ji}
 $$
 
 A matrix is **symmetric** if:
+
 $$
 A^T = A
 $$
 
 For invertible symmetric matrices, a useful factorization is:
+
 $$
 A = LDL^T
 $$
@@ -446,9 +466,11 @@ A subspace of $\mathbb{R}^n$.
 
 ### 4. Left nullspace $N(A^T)$
 All vectors $y$ satisfying:
+
 $$
 A^T y = 0
 $$
+
 A subspace of $\mathbb{R}^m$.
 
 ## 2.3 Column space: solvability in one sentence
@@ -476,12 +498,15 @@ Which leads naturally to module 3.
 The nullspace contains motions invisible to the output map.
 
 If $x_n \in N(A)$ and $x_p$ is a particular solution of $Ax=b$, then:
+
 $$
 x = x_p + x_n
 $$
+
 is also a solution.
 
 So the complete solution is:
+
 $$
 \boxed{x = x_p + N(A)}
 $$
@@ -490,11 +515,13 @@ $$
 This is the heart of **redundancy resolution**.
 
 For manipulator kinematics:
+
 $$
 J(q)\dot q = v
 $$
 
 If the robot is redundant, then:
+
 $$
 \dot q = \dot q_p + \dot q_n,\quad \dot q_n \in N(J)
 $$
@@ -536,6 +563,7 @@ Interpretations:
 
 ### Rank-nullity
 For $A \in \mathbb{R}^{m \times n}$:
+
 $$
 \dim N(A) = n-r
 $$
@@ -580,11 +608,13 @@ This is the correct way to think about:
 ## 3.1 Inner product and orthogonality
 
 The inner product is:
+
 $$
 x^T y = \sum_i x_i y_i
 $$
 
 Two vectors are orthogonal if:
+
 $$
 x^T y = 0
 $$
@@ -602,6 +632,7 @@ The famous relationships:
 $$
 C(A^T) \perp N(A)
 $$
+
 $$
 C(A) \perp N(A^T)
 $$
@@ -609,9 +640,11 @@ $$
 This is not just cute theory. It is a master key.
 
 ### Dimensional identities
+
 $$
 \dim C(A^T) + \dim N(A) = n
 $$
+
 $$
 \dim C(A) + \dim N(A^T) = m
 $$
@@ -630,11 +663,13 @@ Output space splits into:
 For a subspace $V$, its orthogonal complement $V^\perp$ is the set of all vectors orthogonal to everything in $V$.
 
 If $V \subset \mathbb{R}^n$ has dimension $d$, then:
+
 $$
 \dim(V^\perp) = n-d
 $$
 
 Also, every vector $x$ can be decomposed as:
+
 $$
 x = v + w,\quad v \in V,\; w \in V^\perp
 $$
@@ -644,11 +679,13 @@ This is exactly the logic behind projection.
 ## 3.4 Projection onto a line
 
 If a line is spanned by vector $a$, the projection matrix is:
+
 $$
 P = \frac{aa^T}{a^T a}
 $$
 
 Projection of $b$ onto that line:
+
 $$
 Pb = a \frac{a^T b}{a^T a}
 $$
@@ -669,6 +706,7 @@ Projection is everywhere:
 ## 3.5 Projection onto a subspace
 
 If columns of $A$ are linearly independent and span a subspace, then projection onto that subspace is:
+
 $$
 P = A(A^T A)^{-1}A^T
 $$
@@ -677,10 +715,13 @@ $$
 Given $b$, $Pb$ is the closest vector in $C(A)$ to $b$.
 
 Residual:
+
 $$
 e = b - Pb
 $$
+
 lies in:
+
 $$
 N(A^T)
 $$
@@ -690,6 +731,7 @@ This is the precise geometry behind least squares.
 ## 3.6 Least squares
 
 When $Ax=b$ is unsolvable because $b \notin C(A)$, we solve instead:
+
 $$
 \min_x \|Ax-b\|
 $$
@@ -698,11 +740,13 @@ This finds the best approximate solution.
 
 ### Normal equations
 Least-squares solutions satisfy:
+
 $$
 A^T A \hat x = A^T b
 $$
 
 If columns of $A$ are independent:
+
 $$
 \hat x = (A^T A)^{-1}A^T b
 $$
@@ -711,10 +755,13 @@ $$
 $A\hat x$ is the projection of $b$ onto $C(A)$.
 
 Residual:
+
 $$
 e = b - A\hat x
 $$
+
 is orthogonal to the column space:
+
 $$
 A^T e = 0
 $$
@@ -740,11 +787,13 @@ A set of vectors is **orthonormal** if:
 - different vectors are orthogonal.
 
 If matrix $Q$ has orthonormal columns:
+
 $$
 Q^TQ = I
 $$
 
 If $Q$ is square:
+
 $$
 Q^{-1} = Q^T
 $$
@@ -759,6 +808,7 @@ Rotation matrices are orthogonal.
 That is why they preserve rigid-body geometry.
 
 Whenever you see a valid 3D rotation matrix $R$, you expect:
+
 $$
 R^T R = I,\quad \det(R)=1
 $$
@@ -770,9 +820,11 @@ If not, something is cooked.
 Gram-Schmidt converts independent vectors into an orthonormal basis.
 
 Given matrix $A$, this gives:
+
 $$
 A = QR
 $$
+
 where:
 - $Q$: orthonormal columns.
 - $R$: upper triangular.
@@ -781,13 +833,17 @@ where:
 It solves least squares more cleanly than normal equations.
 
 Since:
+
 $$
 A = QR
 $$
+
 then:
+
 $$
 \min_x \|Ax-b\| = \min_x \|QRx-b\|
 $$
+
 and because $Q$ preserves norms nicely, the problem becomes cleaner.
 
 ### Engineering truth
@@ -815,6 +871,7 @@ It encodes:
 - volume scaling.
 
 ### High-value fact
+
 $$
 \det(A)=0 \iff A \text{ is singular}
 $$
@@ -838,6 +895,7 @@ Key rules:
 
 ### Pivot formula
 If $PA=LU$, then determinant is basically signed product of pivots:
+
 $$
 \det(A)=\pm \prod_i u_{ii}
 $$
@@ -847,9 +905,11 @@ The sign comes from the permutation.
 ## 4.3 Geometric meaning: volume scaling
 
 If columns of $A$ define edges of a box or parallelepiped, then:
+
 $$
 |\det(A)|
 $$
+
 is the area/volume scaling factor.
 
 ### Interpretations
@@ -867,10 +927,13 @@ Determinant shows up in:
 - rigid transform sanity checks.
 
 For rotation matrices:
+
 $$
 \det(R)=1
 $$
+
 For reflections:
+
 $$
 \det(R)=-1
 $$
@@ -878,18 +941,22 @@ $$
 ## 4.4 Cofactors and inverse formula
 
 For small matrices:
+
 $$
 A^{-1} = \frac{C^T}{\det(A)}
 $$
+
 where $C$ is the cofactor matrix.
 
 This is elegant for theory and small examples, but awful for large computation.
 
 ### Cramer's rule
 For small systems:
+
 $$
 x_j = \frac{\det(A_j)}{\det(A)}
 $$
+
 where $A_j$ is matrix $A$ with column $j$ replaced by $b$.
 
 Beautiful. Terrible at scale.
@@ -915,6 +982,7 @@ Do not treat them like the universal hammer.
 ## 5.1 The basic idea
 
 An eigenvector of $A$ is a nonzero vector $x$ such that:
+
 $$
 Ax = \lambda x
 $$
@@ -932,10 +1000,13 @@ Eigenvectors reveal the privileged directions the transformation respects.
 ## 5.2 Characteristic equation
 
 To find eigenvalues:
+
 $$
 (A-\lambda I)x = 0
 $$
+
 For nonzero $x$, the matrix must be singular:
+
 $$
 \det(A-\lambda I)=0
 $$
@@ -943,9 +1014,11 @@ $$
 This is the **characteristic equation**.
 
 Then for each eigenvalue $\lambda_i$, solve:
+
 $$
 (A-\lambda_i I)x = 0
 $$
+
 to get eigenvectors.
 
 ## 5.3 Useful fast facts
@@ -971,15 +1044,19 @@ That is a ridiculously useful shortcut.
 ## 5.4 Diagonalization
 
 If a matrix has enough independent eigenvectors, collect them into columns of $S$:
+
 $$
 S = [x_1\; x_2\; \cdots \; x_n]
 $$
 
 Then:
+
 $$
 AS = S\Lambda
 $$
+
 and if $S$ is invertible:
+
 $$
 A = S\Lambda S^{-1}
 $$
@@ -1011,15 +1088,19 @@ This matters because repeated eigenvalues do **not** automatically mean trouble,
 ## 5.6 Matrix powers
 
 If:
+
 $$
 A = S\Lambda S^{-1}
 $$
+
 then:
+
 $$
 A^k = S\Lambda^k S^{-1}
 $$
 
 That means eigenvalues get powered:
+
 $$
 \lambda_i \mapsto \lambda_i^k
 $$
@@ -1029,9 +1110,11 @@ Repeated application of a system is controlled by eigenvalues.
 
 ### Robotics and dynamics meaning
 For discrete-time systems:
+
 $$
 x_{k+1} = Ax_k
 $$
+
 long-term behavior depends on magnitudes of eigenvalues:
 - $|\lambda|<1$: decays.
 - $|\lambda|>1$: grows.
@@ -1042,26 +1125,32 @@ That is control theory DNA.
 ## 5.7 Matrix exponential
 
 Define:
+
 $$
 e^A = \sum_{k=0}^{\infty}\frac{A^k}{k!}
 $$
 
 If $x$ is an eigenvector of $A$ with eigenvalue $\lambda$, then it is also an eigenvector of $e^A$ with eigenvalue:
+
 $$
 e^\lambda
 $$
 
 If $A=S\Lambda S^{-1}$, then:
+
 $$
 e^A = S e^\Lambda S^{-1}
 $$
 
 ### Why this matters
 Continuous-time linear systems:
+
 $$
 \dot x = Ax
 $$
+
 have solution:
+
 $$
 x(t)=e^{At}x(0)
 $$
@@ -1077,9 +1166,11 @@ This underlies:
 ## 5.8 Spectral theorem
 
 If $A$ is real and symmetric:
+
 $$
 A^T=A
 $$
+
 then:
 - all eigenvalues are real.
 - eigenvectors can be chosen orthonormal.
@@ -1117,17 +1208,21 @@ If your cost Hessian is positive definite, the problem is locally bowl-shaped in
 For linear ODEs and difference equations, eigenvalues tell the long-term story.
 
 ### Continuous time
+
 $$
 \dot x = Ax
 $$
+
 - negative real parts: decay.
 - positive real parts: growth/instability.
 - imaginary parts: oscillation.
 
 ### Discrete time
+
 $$
 x_{k+1}=Ax_k
 $$
+
 - eigenvalues inside unit circle: stable decay.
 - outside: unstable.
 - on unit circle: marginal, structure-dependent.
@@ -1157,6 +1252,7 @@ Real engineering matrices are often:
 SVD handles all of them.
 
 For any $A \in \mathbb{R}^{m \times n}$:
+
 $$
 A = U\Sigma V^T
 $$
@@ -1171,16 +1267,19 @@ This factorization is insanely powerful.
 ## 6.2 What singular values and vectors mean
 
 Right singular vectors $v_i$ are orthonormal eigenvectors of:
+
 $$
 A^T A
 $$
 
 Left singular vectors $u_i$ are orthonormal eigenvectors of:
+
 $$
 AA^T
 $$
 
 Singular values satisfy:
+
 $$
 A v_i = \sigma_i u_i
 $$
@@ -1198,6 +1297,7 @@ That is one of the cleanest structural descriptions in all of applied math.
 The rank of $A$ equals the number of nonzero singular values.
 
 If rank is $r$, then:
+
 $$
 A = \sum_{i=1}^{r}\sigma_i u_i v_i^T
 $$
@@ -1211,6 +1311,7 @@ It means the matrix is built from weighted mode pairs.
 ## 6.4 Low-rank approximation
 
 If singular values decay quickly, then:
+
 $$
 A \approx \sum_{i=1}^{k}\sigma_i u_i v_i^T
 \quad\text{for }k \ll r
@@ -1245,10 +1346,13 @@ Most matrices do not have an inverse.
 SVD gives the correct generalization.
 
 If:
+
 $$
 A = U\Sigma V^T
 $$
+
 then pseudoinverse is:
+
 $$
 A^+ = V\Sigma^+ U^T
 $$
@@ -1270,6 +1374,7 @@ It gives:
 This is one of the most important formulas in robotics.
 
 For inverse kinematics:
+
 $$
 \dot q = J^+ v
 $$
@@ -1289,6 +1394,7 @@ That single formula basically runs half of academic robotics.
 ## 6.6 Least squares via pseudoinverse
 
 For unsolvable $Ax=b$, a least-squares solution is:
+
 $$
 \hat x = A^+ b
 $$
@@ -1360,6 +1466,7 @@ That is the whole course arc.
 # Robotics Connection Sheet
 
 ## A. Manipulator Jacobian
+
 $$
 v = J(q)\dot q
 $$
@@ -1372,6 +1479,7 @@ $$
 - SVD of $J$: manipulability directions and weakness modes.
 
 ## B. Linear control systems
+
 $$
 \dot x = Ax + Bu
 $$
@@ -1405,72 +1513,87 @@ $$
 # What to Never Forget
 
 ## 1. Solvability
+
 $$
 Ax=b \iff b \in C(A)
 $$
 
 ## 2. Complete solution
+
 $$
 x = x_p + x_n,\quad x_n \in N(A)
 $$
 
 ## 3. Rank-nullity
+
 $$
 \dim N(A)=n-r
 $$
 
 ## 4. Orthogonality relations
+
 $$
 C(A^T)\perp N(A),\quad C(A)\perp N(A^T)
 $$
 
 ## 5. Projection onto column space
+
 $$
 P=A(A^TA)^{-1}A^T
 $$
+
 when columns are independent
 
 ## 6. Least squares
+
 $$
 A^TA\hat x=A^Tb
 $$
 
 ## 7. Orthogonal matrix
+
 $$
 Q^TQ=I,\quad Q^{-1}=Q^T
 $$
 
 ## 8. Determinant and singularity
+
 $$
 \det(A)=0 \iff A \text{ singular}
 $$
 
 ## 9. Eigenvalue definition
+
 $$
 Ax=\lambda x
 $$
 
 ## 10. Diagonalization
+
 $$
 A=S\Lambda S^{-1}
 $$
 
 ## 11. Continuous-time solution
+
 $$
 x(t)=e^{At}x(0)
 $$
 
 ## 12. SVD
+
 $$
 A=U\Sigma V^T
 $$
 
 ## 13. Pseudoinverse
+
 $$
 A^+=V\Sigma^+U^T
 $$
 
 ## 14. IK-style minimum norm solution
+
 $$
 \dot q = J^+ v
 $$
