@@ -162,7 +162,11 @@ $$
 with:
 
 $$
-J(q) = \begin{bmatrix} J_P(q) \\ J_O(q) \end{bmatrix}
+J(q) =
+\begin{bmatrix}
+J_P(q) \\
+J_O(q)
+\end{bmatrix}
 $$
 
 For joint `i`:
@@ -190,7 +194,11 @@ $$
 where:
 
 $$
-\gamma_e = \begin{bmatrix} f_e \\ \mu_e \end{bmatrix}
+\gamma_e =
+\begin{bmatrix}
+f_e \\
+\mu_e
+\end{bmatrix}
 $$
 
 ## Singularity / redundancy
@@ -351,7 +359,11 @@ Then we assemble more complex orientation descriptions:
 To combine rotation and translation in one object:
 
 $$
-T = \begin{bmatrix} R & p \\ 0 & 1 \end{bmatrix}
+T =
+\begin{bmatrix}
+R & p \\
+0 & 1
+\end{bmatrix}
 $$
 
 This lets we compose poses by matrix multiplication.
@@ -533,7 +545,12 @@ we are ready for Jacobians, statics, and dynamics.
 The manipulator Jacobian maps joint velocity to end-effector twist:
 
 $$
-v_e = \begin{bmatrix} \dot p_e \\ \omega_e \end{bmatrix} = J(q)\dot q
+v_e =
+\begin{bmatrix}
+\dot p_e \\
+\omega_e
+\end{bmatrix}
+= J(q)\dot q
 $$
 
 This is the local linearization of manipulator motion in joint space.
@@ -541,7 +558,11 @@ This is the local linearization of manipulator motion in joint space.
 ## Structure
 
 $$
-J(q) = \begin{bmatrix} J_P(q) \\ J_O(q) \end{bmatrix}
+J(q) =
+\begin{bmatrix}
+J_P(q) \\
+J_O(q)
+\end{bmatrix}
 $$
 
 For joint `i`:
@@ -1117,7 +1138,8 @@ R^TR = I, \qquad R^{-1}=R^T, \qquad \det R=1
 $$
 
 $$
-T = \begin{bmatrix}R & p\\0 & 1\end{bmatrix}
+T = \begin{bmatrix}R & p\\
+0 & 1\end{bmatrix}
 $$
 
 $$
