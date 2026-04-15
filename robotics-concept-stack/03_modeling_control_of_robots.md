@@ -127,7 +127,11 @@ $$
 ## Homogeneous transformation
 
 $$
-T = \begin{bmatrix} R & p \\ 0 & 1 \end{bmatrix}
+T =
+\begin{bmatrix}
+R & p \\
+0 & 1
+\end{bmatrix}
 $$
 
 with pose composition:
