@@ -1292,7 +1292,13 @@ $$
 $$
 
 $$
-Q^{*}(s,a)=\mathbb{E}\!\left[r+\gamma \max_{a'} Q^{*}(s',a') \mid s,a\right]
+Q_{\mathrm{star}}(s,a)
+=
+\mathbb{E}\!\left[
+r+\gamma \max_{a'} Q_{\mathrm{star}}(s',a')
+\;\middle|\;
+s,a
+\right]
 $$
 
 $$
