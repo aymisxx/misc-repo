@@ -334,16 +334,15 @@ Approximation is the survival mechanism.
 
 ## 3.1 What Q-learning learns
 
-Q-learning learns the optimal action-value function directly:
 
 $$
-Q^*(s,a)
+Q^{*}(s,a)
 $$
 
 Once that is known, the optimal policy is greedy:
 
 $$
-\pi^*(s)=\arg\max_a Q^*(s,a)
+\pi^{*}(s)=\arg\max_{a} Q^{*}(s,a)
 $$
 
 The class notes define Q-learning as model-free and off-policy, and tie it directly to the Bellman optimality fixed point.
