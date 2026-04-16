@@ -335,24 +335,24 @@ Approximation is the survival mechanism.
 ## 3.1 What Q-learning learns
 
 
-$$
-Q^{*}(s,a)
-$$
+Q-learning learns the optimal action-value function directly: the best expected discounted return obtainable from taking action $a$ in state $s$ and then acting optimally thereafter.
 
-Once that is known, the optimal policy is greedy:
+Once that function is known, the policy simply picks the action with the largest value at each state.
 
 $$
-\pi^{*}(s)=\arg\max_{a} Q^{*}(s,a)
+\text{Choose } a^{*}(s) \in \arg\max_{a} Q(s,a),
+\qquad
+\pi(s)=a^{*}(s).
 $$
 
-The class notes define Q-learning as model-free and off-policy, and tie it directly to the Bellman optimality fixed point.
+The class notes define Q-learning as model-free and off-policy, and connect it directly to the Bellman optimality fixed point.
 
 ## 3.2 Bellman optimality equation for Q
 
 The target object is:
 
 $$
-Q^*(s,a)=\mathbb{E}\left[r+\gamma \max_{a'} Q^*(s',a') \mid s,a\right]
+Q^{*}(s,a)=\mathbb{E}\!\left[r+\gamma \max_{a'} Q^{*}(s',a') \mid s,a\right]
 $$
 
 This says:
@@ -1292,7 +1292,7 @@ $$
 $$
 
 $$
-Q^*(s,a)=\mathbb{E}[r+\gamma \max_{a'}Q^*(s',a')\mid s,a]
+Q^{*}(s,a)=\mathbb{E}\!\left[r+\gamma \max_{a'} Q^{*}(s',a') \mid s,a\right]
 $$
 
 $$
