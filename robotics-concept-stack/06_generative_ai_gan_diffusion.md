@@ -318,7 +318,7 @@ They are the clean toy version of a much more general worldview:
 - data is generated from something lower-dimensional,
 - generation is easier in latent space than raw space.
 
-# Module 3: GANs — The First Main Boss
+# Module 3: GANs - The First Main Boss
 
 ## 3.1 What a GAN is really doing
 
@@ -594,7 +594,7 @@ Practical truth:
 
 Evaluation is always a proxy.
 
-# Module 5: VAEs and ELBO — The Likelihood/Latent Side of the Story
+# Module 5: VAEs and ELBO - The Likelihood/Latent Side of the Story
 
 ## 5.1 What a VAE is really doing
 
@@ -673,7 +673,7 @@ The VAE block is important, but in this course it is mainly part of the conceptu
 
 And it sets up the diffusion block nicely, because diffusion is also taught through ELBO language before being reinterpreted as score learning.
 
-# Module 6: Diffusion Models — The Second Main Boss
+# Module 6: Diffusion Models - The Second Main Boss
 
 ## 6.1 Core intuition
 
